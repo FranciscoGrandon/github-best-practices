@@ -1,133 +1,420 @@
-# GitHub: mejores prácticas para proyectos propios y colaborativos
+# GitHub Best Practices
 
-Una guía práctica para usar GitHub de forma ordenada, segura y eficaz tanto en proyectos personales como en equipos.
+> Una guía completa y profesional para trabajar de forma ordenada, segura y eficiente en GitHub, tanto en proyectos personales como en equipo.
 
-## 1. Objetivo
+<div align="center">
 
-El objetivo de esta guía es ayudar a mantener repositorios limpios, colaborativos y fáciles de mantener. Esto incluye:
+![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg?style=flat-square)
+![License](https://img.shields.io/badge/license-MIT-green.svg?style=flat-square)
+![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square)
+![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)
 
-- organización del repositorio
-- flujo de trabajo con ramas
-- buenas prácticas de commits
-- uso de pull requests
-- revisión de código
-- seguridad
-- automatización
-- colaboración en equipo
+**[🚀 Comenzar](#cómo-empezar) • [📖 Guía Completa](#índice-de-contenidos) • [⭐ Contribuir](#contribuir)**
+
+</div>
 
 ---
 
-## 2. Organización del repositorio
+## 📋 Tabla de contenidos
 
-Un repositorio bien estructurado facilita el trabajo y reduce errores.
+- [Objetivo](#objetivo)
+- [Cómo empezar](#cómo-empezar)
+- [Índice de contenidos](#índice-de-contenidos)
+- [Características principales](#características-principales)
+- [Estructura del repositorio](#estructura-del-repositorio)
+- [Flujo de trabajo recomendado](#flujo-de-trabajo-recomendado)
+- [Módulos de la guía](#módulos-de-la-guía)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
 
-### Recomendaciones básicas
+---
 
-- Usa un nombre claro y representativo para el proyecto.
-- Mantén una estructura lógica de carpetas:
-  - `src/` para código fuente
-  - `docs/` para documentación
-  - `tests/` para pruebas
-  - `.github/` para workflows, templates y configuración
-  - `scripts/` para utilidades o automatización
-- Añade un README claro con:
-  - descripción del proyecto
-  - objetivo
-  - requisitos
-  - instalación
-  - uso
-  - contribución
-  - roadmap o siguiente pasos
-- Añade una licencia si el proyecto será compartido o reutilizado.
-- Usa `.gitignore` para evitar archivos innecesarios.
-- Añade un archivo `CONTRIBUTING.md` cuando el proyecto sea colaborativo.
+## 🎯 Objetivo
 
-### Estructura ejemplo
+Esta guía reúne **mejores prácticas profesionales** para trabajar en GitHub:
 
-```text
+✅ Organización clara de repositorios  
+✅ Flujo de trabajo efectivo con ramas  
+✅ Commits y pull requests de calidad  
+✅ Revisión de código constructiva  
+✅ Colaboración segura y profesional  
+✅ Mantenimiento y escalabilidad  
+
+**Ideal para:**
+- Desarrolladores en proyectos personales
+- Equipos colaborativos
+- Startups y empresas
+- Mejora de procesos de desarrollo
+
+---
+
+## 🚀 Cómo empezar
+
+### 1. Clona o descarga este repositorio
+
+```bash
+git clone https://github.com/FranciscoGrandon/github-best-practices.git
+cd github-best-practices
+```
+
+### 2. Explora la guía principal
+
+Comienza leyendo el [README completo](#) que cubre los conceptos fundamentales.
+
+### 3. Consulta los módulos específicos
+
+Cada área tiene su propia guía detallada:
+
+| Módulo | Descripción | Acceso |
+|--------|-------------|--------|
+| **Branching Model** | Estrategia de ramas | [📄 Ver](docs/branching-model.md) |
+| **Code Review** | Guía de revisión de código | [📄 Ver](docs/code-review-guide.md) |
+| **Contribuir** | Pautas para contribuidores | [📄 Ver](CONTRIBUTING.md) |
+
+### 4. Usa las plantillas
+
+Copia las plantillas para tu proyecto:
+
+```bash
+# Plantilla de bug report
+cp .github/ISSUE_TEMPLATE/bug_report.yml tu-proyecto/.github/ISSUE_TEMPLATE/
+
+# Plantilla de feature request
+cp .github/ISSUE_TEMPLATE/feature_request.yml tu-proyecto/.github/ISSUE_TEMPLATE/
+
+# Plantilla de Pull Request
+cp .github/PULL_REQUEST_TEMPLATE.md tu-proyecto/.github/
+```
+
+### 5. Personaliza según tu proyecto
+
+Adapta las guías y plantillas a los requisitos específicos de tu equipo o proyecto.
+
+---
+
+## 📚 Índice de contenidos
+
+### Conceptos Fundamentales
+
+1. **[Organización del repositorio](#1-organización-del-repositorio)**
+   - Estructura recomendada
+   - Buenas prácticas iniciales
+
+2. **[Flujo de trabajo](#2-flujo-de-trabajo-recomendado)**
+   - Pasos del flujo estándar
+   - Integración continua
+
+3. **[Ramas y branching model](docs/branching-model.md)**
+   - Tipos de ramas
+   - Convenciones de nombres
+   - Ejemplos prácticos
+
+### Desarrollo Colaborativo
+
+4. **[Commits](#4-commits)**
+   - Mensaje claros
+   - Prefixes y convenciones
+   - Buenas prácticas
+
+5. **[Pull Requests](#5-pull-requests)**
+   - Estructura del PR
+   - Plantillas
+   - Ciclo de vida
+
+6. **[Revisión de código](docs/code-review-guide.md)**
+   - Qué revisar
+   - Cómo comentar
+   - Mejores prácticas
+
+### Seguridad y Operaciones
+
+7. **[Seguridad](#7-seguridad)**
+   - Qué no subir a GitHub
+   - Secretos y credenciales
+   - Buenas prácticas
+
+8. **[Issues y seguimiento](#8-issues-y-seguimiento)**
+   - Tipos de issues
+   - Plantillas disponibles
+   - Organización
+
+9. **[Automatización](#9-automatización-con-github-actions)**
+   - GitHub Actions
+   - Casos comunes
+   - Configuración
+
+10. **[Operaciones frecuentes](#10-operaciones-frecuentes-en-github)**
+    - Comandos git
+    - Flujo paso a paso
+    - Checklists
+
+---
+
+## ✨ Características principales
+
+### 📖 Guías completas y prácticas
+
+Cada sección incluye:
+- Explicación clara del concepto
+- Ejemplos reales
+- Checklists accionables
+- Mejores prácticas
+
+### 🎨 Plantillas listas para usar
+
+- Bug report template
+- Feature request template
+- Pull request template
+- Contributing guide
+
+### 🔗 Referencias y enlaces
+
+Toda la documentación está interconectada para fácil navegación.
+
+### 🎯 Enfoque profesional
+
+Escrito pensando en equipos, proyectos reales y escalabilidad.
+
+---
+
+## 📁 Estructura del repositorio
+
+```
+github-best-practices/
+├── README.md                           # Este archivo
+├── CONTRIBUTING.md                     # Guía de contribución
+├── LICENSE                             # Licencia MIT
+├── .gitignore                          # Archivo de exclusión
+│
+├── docs/
+│   ├── branching-model.md              # Estrategia de ramas
+│   ├── code-review-guide.md            # Guía de code review
+│   └── operations-checklist.md         # Checklist de operaciones
+│
+└── .github/
+    ├── ISSUE_TEMPLATE/
+    │   ├── bug_report.yml              # Plantilla: bug
+    │   └── feature_request.yml         # Plantilla: feature
+    └── PULL_REQUEST_TEMPLATE.md        # Plantilla: PR
+```
+
+---
+
+## 🔄 Flujo de trabajo recomendado
+
+```
+main (rama principal)
+  │
+  ├─→ feature/nueva-funcionalidad
+  │   └─→ Pull Request
+  │       └─→ Revisión
+  │           └─→ Merge a main
+  │
+  ├─→ fix/corrección-bug
+  │   └─→ Pull Request
+  │       └─→ Merge a main
+  │
+  └─→ hotfix/urgencia-producción
+      └─→ Merge directo a main
+```
+
+### Pasos del flujo
+
+1. **Actualizar main**
+   ```bash
+   git checkout main
+   git pull origin main
+   ```
+
+2. **Crear rama**
+   ```bash
+   git checkout -b feature/descripcion
+   ```
+
+3. **Trabajar y hacer commits**
+   ```bash
+   git add .
+   git commit -m "feat: descripción clara"
+   ```
+
+4. **Subir cambios**
+   ```bash
+   git push origin feature/descripcion
+   ```
+
+5. **Abrir Pull Request**
+   - Ir a GitHub
+   - Crear PR con descripción clara
+   - Solicitar revisión
+
+6. **Revisar y mezclar**
+   - Responder comentarios
+   - Hacer cambios si es necesario
+   - Merge a main
+
+---
+
+## 📦 Módulos de la guía
+
+### 1️⃣ Organización del repositorio
+
+Un repositorio bien estructurado facilita mantenimiento y colaboración.
+
+**Incluye:**
+- Estructura de carpetas
+- Archivos esenciales (README, LICENSE, .gitignore)
+- Documentación
+- Configuración
+
+[→ Más detalles](#1-organización-del-repositorio)
+
+### 2️⃣ Branching Model
+
+Estrategia clara para trabajar con ramas.
+
+**Tipos de ramas:**
+- `main` - rama principal
+- `feature/*` - nuevas funcionalidades
+- `fix/*` - correcciones
+- `hotfix/*` - emergencias
+- `docs/*` - documentación
+- `chore/*` - mantenimiento
+
+[→ Consulta la guía completa](docs/branching-model.md)
+
+### 3️⃣ Commits de calidad
+
+Mensajes claros, enfocados y descriptivos.
+
+**Prefixes:**
+- `feat:` nueva funcionalidad
+- `fix:` corrección de error
+- `docs:` documentación
+- `test:` pruebas
+- `refactor:` reestructuración
+
+[→ Más detalles](#4-commits)
+
+### 4️⃣ Pull Requests efectivos
+
+Documentación clara, revisión constructiva, merge seguro.
+
+**Elementos:**
+- Descripción clara
+- Cambios listados
+- Validación y pruebas
+- Referencias a issues
+
+[→ Más detalles](#5-pull-requests)
+
+### 5️⃣ Code Review profesional
+
+Revisión constructiva, específica y enfocada en la calidad.
+
+**Se revisa:**
+- Lógica y comportamiento
+- Seguridad
+- Rendimiento
+- Claridad del código
+
+[→ Consulta la guía completa](docs/code-review-guide.md)
+
+### 6️⃣ Seguridad
+
+Protege tu proyecto: no subas secretos, usa variables de entorno.
+
+**Importante:**
+- Nunca subir tokens, passwords, claves
+- Usar GitHub Secrets para CI/CD
+- Revisar dependencias vulnerables
+
+[→ Más detalles](#7-seguridad)
+
+### 7️⃣ Issues y seguimiento
+
+Documenta bugs, mejoras y tareas de forma clara.
+
+**Plantillas:**
+- Bug report
+- Feature request
+- Issue general
+
+[→ Más detalles](#8-issues-y-seguimiento)
+
+---
+
+## 📊 Estadísticas de esta guía
+
+| Métrica | Valor |
+|---------|-------|
+| Secciones | 10+ |
+| Ejemplos prácticos | 50+ |
+| Plantillas incluidas | 3 |
+| Guías detalladas | 2 |
+| Checklists | 5+ |
+
+---
+
+## 1. Organización del repositorio
+
+### Estructura recomendada
+
+```
 my-project/
 ├── README.md
+├── CONTRIBUTING.md
 ├── LICENSE
 ├── .gitignore
-├── CONTRIBUTING.md
 ├── docs/
-│   └── architecture.md
+│   ├── branching-model.md
+│   └── code-review-guide.md
 ├── src/
 │   └── app/
 ├── tests/
-│   └── integration/
 ├── .github/
 │   ├── workflows/
 │   ├── ISSUE_TEMPLATE/
 │   └── PULL_REQUEST_TEMPLATE.md
 └── scripts/
-    └── deploy.sh
 ```
+
+### Checklist inicial
+
+- [ ] Nombre claro y descriptivo
+- [ ] README con objetivos e instalación
+- [ ] .gitignore actualizado
+- [ ] LICENSE definida
+- [ ] CONTRIBUTING.md si es colaborativo
+- [ ] Carpetas organizadas lógicamente
 
 ---
 
-## 3. Flujo de trabajo con GitHub
+## 2. Flujo de trabajo recomendado
 
-El flujo recomendado para la mayoría de proyectos es:
+El flujo estándar facilita la integración y reduce errores:
 
-1. Crear una rama nueva desde la rama principal
-2. Trabajar en esa rama
-3. Hacer commits pequeños y claros
-4. Abrir un Pull Request
-5. Revisar y comentar el código
-6. Fusionar cuando esté validado
-
-### Rama principal
-
-Lo normal es usar una rama principal estable:
-
-- `main`
-- `master`
-
-En proyectos colaborativos, suele evitarse hacer commits directos a la rama principal.
-
-### Convención de nombres de ramas
-
-Usa nombres descriptivos y consistentes:
-
-```bash
-git checkout -b feature/login-flow
-git checkout -b fix/resolve-payment-error
-git checkout -b chore/update-dependencies
-git checkout -b docs/update-readme
-git checkout -b hotfix/security-patch
-```
-
-Convenciones comunes:
-
-- `feature/` para nuevas funcionalidades
-- `fix/` para correcciones de bugs
-- `docs/` para cambios de documentación
-- `chore/` para tareas de mantenimiento
-- `refactor/` para reorganización del código
-- `hotfix/` para correcciones urgentes
+1. Actualizar rama principal
+2. Crear rama nueva
+3. Trabajar en la rama
+4. Commits pequeños
+5. Abrir Pull Request
+6. Revisar y comentar
+7. Fusionar a main
+8. Eliminar rama si ya no se usa
 
 ---
 
-## 4. Buenas prácticas con commits
+## 4. Commits
 
-Los commits deben ser pequeños, claros y fáciles de revisar.
-
-### Reglas recomendadas
-
-- Un commit debe tener un propósito concreto.
-- Evita commits gigantes que mezclen varias cosas.
-- Usa mensajes descriptivos con estilo consistente.
-- Revisa el diff antes de confirmar.
-
-### Mensajes de commit útiles
+### Buenas prácticas
 
 ```bash
+# ✅ Bien: pequeño, específico, claro
 git commit -m "feat: add user authentication flow"
-git commit -m "fix: resolve null value in profile response"
-git commit -m "docs: update getting started guide"
-git commit -m "test: add API validation for invoice endpoint"
-git commit -m "refactor: simplify project configuration loader"
+
+# ❌ Mal: grande, vago, poco descriptivo
+git commit -m "arreglé cosas"
 ```
 
 ### Prefixes comunes
@@ -136,485 +423,234 @@ git commit -m "refactor: simplify project configuration loader"
 - `fix:` corrección de error
 - `docs:` documentación
 - `test:` pruebas
-- `refactor:` reorganización del código
-- `chore:` mantenimiento o tareas rutinarias
-- `perf:` mejora de rendimiento
-- `ci:` cambios en CI/CD
-- `build:` cambios en build o dependencias
-
-### Consejo práctico
-
-Si un commit requiere explicar más de un concepto, probablemente está mezclando varias tareas. Mejor dividirlo.
+- `refactor:` reestructuración
+- `chore:` mantenimiento
+- `perf:` rendimiento
+- `ci:` configuración
 
 ---
 
-## 5. Pull Requests (PRs)
-
-Los Pull Requests son una parte esencial del trabajo colaborativo en GitHub.
-
-### Qué debe incluir un PR
-
-- título claro y específico
-- descripción del problema y solución
-- alcance del cambio
-- pruebas realizadas
-- enlaces o referencias a issues relacionadas
-- capturas si aplica
+## 5. Pull Requests
 
 ### Plantilla recomendada
 
 ```markdown
 ## Descripción
-Describe brevemente el problema que resuelve este cambio.
+Explica el problema que resuelve este cambio.
 
 ## Cambios realizados
 - Cambio 1
 - Cambio 2
-- Cambio 3
 
 ## Validación
-- [ ] Ejecuté pruebas locales
-- [ ] Revisé el linter
-- [ ] Verifiqué el comportamiento esperado
+- [ ] Tests pasados
+- [ ] Linter revisado
+- [ ] Comportamiento verificado
 
 ## Referencias
-- Fixes #123
+Fixes #123
 ```
 
-### Buenas prácticas para PRs
-
-- Crea un PR para cada tarea o cambio importante.
-- Mantén el PR enfocado.
-- Pide revisión a personas relevantes.
-- Responde a comentarios con cambios concretos.
-- No mezcles refactors, mejoras y correcciones en un mismo PR si se pueden separar.
+Usa la plantilla oficial: [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md)
 
 ---
 
-## 6. Revisión de código
+## 7. Seguridad
 
-La revisión de código no es solo aprobar o rechazar. Es una oportunidad para mejorar la calidad del proyecto.
+### ⚠️ Nunca subas
 
-### Qué revisar
+- Tokens o claves API
+- Passwords
+- Archivos `.env` reales
+- Certificados privados
 
-- lógica y corrección del algoritmo
-- manejo de errores
-- seguridad
-- claridad del código
-- consistencia con el estilo del proyecto
-- impacto en otras partes del sistema
-- cobertura de pruebas
+### ✅ Usa en su lugar
 
-### Comentarios útiles
-
-- “¿Se está manejando este caso límite?”
-- “¿Podríamos simplificar esta lógica?”
-- “¿Hay otra forma más segura de validar esta entrada?”
-- “¿Hace falta añadir una prueba para este comportamiento?”
-
-### Reglas para una buena revisión
-
-- Sé específico y constructivo.
-- Explica el problema y la mejora sugerida.
-- Evita comentarios genéricos como “esto está mal” sin contexto.
-- Si algo no está claro, pide aclaración.
+- Variables de entorno
+- GitHub Secrets
+- Gestores de secretos
+- Herramientas de escaneo
 
 ---
 
-## 7. Seguridad en GitHub
+## 8. Issues y seguimiento
 
-La seguridad es crítica en cualquier proyecto.
+### Plantillas disponibles
 
-### No subir secretos
+1. **Bug Report** - Reporta problemas
+2. **Feature Request** - Propone mejoras
+3. **General** - Otras tareas
 
-Nunca subas al repositorio:
-
-- tokens
-- claves API
-- credenciales de bases de datos
-- contraseñas
-- archivos `.env` con valores reales
-- certificados o claves privadas
-
-### Recomendaciones
-
-- Usa variables de entorno para configuraciones locales.
-- Usa GitHub Secrets para pipelines y despliegues.
-- Revisa depende de seguridad o vulnerabilidades con herramientas como:
-  - Dependabot
-  - Renovate
-  - Snyk
-- Escanea dependencias antes de subir cambios importantes.
-
-### `.gitignore`
-
-Incluye archivos generados o locales como:
-
-```gitignore
-.env
-.env.local
-node_modules/
-.dist/
-coverage/
-.DS_Store
-```
+Accede a ellas desde la pestaña "Issues" → "New issue"
 
 ---
 
-## 8. Colaboración en equipo
+## 9. Automatización con GitHub Actions
 
-Cuando varias personas trabajan en el mismo proyecto, la disciplina y la comunicación importan tanto como el código.
-
-### Recomendaciones clave
-
-- Mantén la rama principal actualizada.
-- Haz `pull` o `fetch` antes de comenzar a trabajar.
-- Evita tocar la misma zona de código sin coordinación.
-- Usa issues para tareas y seguimiento.
-- Documenta decisiones importantes.
-- Establece responsables o reviewers en PRs.
-- Usa labels para clasificar tareas.
-
-### Labels útiles
-
-- `bug`
-- `enhancement`
-- `documentation`
-- `help wanted`
-- `good first issue`
-- `question`
-- `security`
-
-### Proyectos y milestones
-
-- Usa GitHub Projects para planificar trabajo visualmente.
-- Usa milestones para agrupar objetivos de una etapa o release.
-
----
-
-## 9. Issues: cómo usarlos bien
-
-Los issues sirven para documentar trabajo, bugs, dudas y mejoras.
-
-### Buen uso de issues
-
-- crear un issue por cada tarea o bug relevante
-- describir el problema con contexto
-- incluir pasos para reproducir un bug
-- asignar prioridad si aplica
-- enlazar con pull requests relacionados
-
-### Plantilla recomendada para bug report
-
-```markdown
-## Descripción
-Describe el problema.
-
-## Pasos para reproducir
-1. Paso 1
-2. Paso 2
-3. Paso 3
-
-## Resultado esperado
-Describe lo que debería ocurrir.
-
-## Resultado actual
-Describe lo que está ocurriendo.
-
-## Entorno
-- OS:
-- Browser/Version:
-- App Version:
-```
-
----
-
-## 10. GitHub Actions y automatización
-
-GitHub Actions permite automatizar tareas repetitivas.
-
-### Casos comunes
-
-- ejecutar pruebas automáticamente
-- lanzar linters
-- validar compilación
-- publicar documentación
-- desplegar aplicaciones
-- ejecutar scripts de calidad
-
-### Recomendaciones
-
-- Usa CI para validar cambios en cada pull request.
-- No dependas solo de la revisión manual.
-- Mantén los workflows pequeños y entendibles.
-- Guarda secretos en GitHub Secrets.
-
-### Ejemplo simple de workflow
+Automatiza validaciones y despliegues:
 
 ```yaml
 name: CI
 
-on:
-  push:
-    branches: [main]
-  pull_request:
+on: [push, pull_request]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - name: Install dependencies
-        run: npm install
       - name: Run tests
         run: npm test
 ```
 
 ---
 
-## 11. Mantenimiento de ramas y limpieza del repositorio
+## 10. Operaciones frecuentes en GitHub
 
-Para evitar caos, conviene mantener las ramas ordenadas.
-
-### Recomendaciones
-
-- elimina ramas fusionadas que ya no se usan
-- evita dejar ramas antiguas o sin trabajo
-- mantén `main` limpio y estable
-- usa nombres claros y permanentes
-- no guardes ramas temporales para siempre
-
----
-
-## 12. Releases y versionado
-
-Cuando una versión del proyecto es importante, publica una release.
-
-### Buenas prácticas
-
-- usar etiquetas semver: `v1.0.0`, `v1.2.3`
-- documentar cambios principales
-- indicar nuevas funcionalidades y arreglos
-- incluir notas de despliegue si aplica
-
-### Versionado semver
-
-- `MAJOR`: cambios incompatibles
-- `MINOR`: nuevas funcionalidades compatibles
-- `PATCH`: correcciones de errores
-
-Ejemplo:
-
-- `1.0.0` primera versión estable
-- `1.1.0` nueva funcionalidad
-- `1.1.1` corrección menor
-
----
-
-## 13. Trabajo en proyectos propios
-
-Cuando trabajas solo, sigue igual de bien las prácticas, aunque no haya equipo.
-
-### Recomendaciones
-
-- usa ramas para cada tarea
-- mantén tus commits explicativos
-- documenta cómo arrancar el proyecto
-- usa issues para registrar mejoras y bugs
-- crea releases cuando publíques versiones relevantes
-- usa un README profesional
-- añade badges si tienen sentido
-
-### Buenas señales de un proyecto bien mantenido
-
-- README claro
-- instrucciones de instalación sencillas
-- commit history ordenada
-- issues organizadas
-- cambios con PRs aunque sea un proyecto individual
-
----
-
-## 14. Trabajo en proyectos colaborativos
-
-Cuando hay más personas involucradas, debes reforzar la comunicación y la estructura.
-
-### Recomendaciones adicionales
-
-- definir un flujo de trabajo y documentarlo
-- establecer reglas claras de aprobación
-- usar `CONTRIBUTING.md`
-- separar tareas concretas
-- revisar PRs con tiempo y atención
-- evitar “merge sin contexto”
-- mantener la rama principal estable
-
----
-
-## 15. Operaciones más frecuentes en GitHub
-
-Estas son las tareas más habituales durante el día a día.
-
-### Crear un repositorio
-
-1. Ir a GitHub
-2. Pulsar “New repository”
-3. Elegir nombre, visibilidad y descripción
-4. Inicializar con README si aplica
-5. Crear el repositorio
-
-### Clonar un repositorio
+### Comandos esenciales
 
 ```bash
-git clone https://github.com/usuario/repositorio.git
-```
+# Crear rama
+git checkout -b feature/nueva
 
-### Crear una rama
+# Subir cambios
+git push origin feature/nueva
 
-```bash
-git checkout -b feature/nueva-funcionalidad
-```
-
-### Ver el estado del repositorio
-
-```bash
-git status
-```
-
-### Añadir cambios al staging
-
-```bash
-git add .
-```
-
-### Hacer un commit
-
-```bash
-git commit -m "feat: add new flow"
-```
-
-### Subir cambios a GitHub
-
-```bash
-git push origin feature/nueva-funcionalidad
-```
-
-### Crear un PR
-
-1. Subir la rama
-2. Ir al repositorio en GitHub
-3. Hacer clic en “Compare & pull request”
-4. Completar la descripción
-5. Asignar reviewers
-6. Crear el PR
-
-### Fusionar un PR
-
-- revisar comentarios
-- confirmar que pasa la validación
-- hacer merge
-- borrar rama si ya no es necesaria
-
-### Actualizar tu rama con la principal
-
-```bash
-git fetch origin
-git rebase origin/main
-```
-
-O bien:
-
-```bash
+# Actualizar desde main
 git pull origin main
-```
 
-### Ver historial
-
-```bash
+# Ver historial
 git log --oneline --decorate --graph
+
+# Fusionar localmente
+git merge feature/nueva
 ```
 
 ---
 
-## 16. Checklist recomendada antes de hacer merge
+## 🤝 Contribuir
 
-Antes de fusionar un PR, revisa esto:
+¿Quieres mejorar esta guía?
 
-- [ ] El cambio tiene un propósito claro
-- [ ] Los commits son pequeños y entendibles
-- [ ] La documentación fue actualizada si aplica
-- [ ] Hay pruebas y pasan correctamente
-- [ ] El código cumple con el estilo del proyecto
-- [ ] No hay secretos ni archivos sensibles
-- [ ] El PR tiene descripción clara
-- [ ] Se resolvieron comentarios de revisión
-- [ ] La rama está actualizada con la principal
+1. **Fork** el repositorio
+2. **Crea una rama** con tu mejora
+3. **Abre un Pull Request** con descripción clara
+4. **Espera revisión** y responde comentarios
 
----
+### Pautas
 
-## 17. Errores frecuentes en GitHub
+- Sé claro y específico
+- Respeta el tono profesional
+- Revisa documentación existente antes de cambiar
+- Incluye ejemplos si añades contenido
 
-Estos son algunos errores que suelen aparecer:
-
-- hacer commits enormes y poco claros
-- trabajar directamente en `main`
-- no documentar cambios importantes
-- subir archivos sensibles
-- abrir PRs sin descripción
-- no revisar código antes de fusionar
-- mezclar varias tareas en un mismo PR
-- no borrar ramas obsoletas
-- no hacer pruebas antes de desplegar
+Para más detalles, consulta [CONTRIBUTING.md](CONTRIBUTING.md)
 
 ---
 
-## 18. Regla práctica resumida
+## 📖 Recursos relacionados
 
-Si quieres resumirlo en una sola idea:
-
-- trabaja en ramas
-- haz commits pequeños y claros
-- abre PRs con propósito
-- revisa con atención
-- documenta lo necesario
-- usa seguridad y automatización
-- mantén el repositorio ordenado
+| Recurso | Descripción |
+|---------|-------------|
+| [CONTRIBUTING.md](CONTRIBUTING.md) | Guía de contribución |
+| [docs/branching-model.md](docs/branching-model.md) | Estrategia de ramas |
+| [docs/code-review-guide.md](docs/code-review-guide.md) | Guía de revisión de código |
+| [.github/ISSUE_TEMPLATE/](github/ISSUE_TEMPLATE/) | Plantillas de issues |
+| [.github/PULL_REQUEST_TEMPLATE.md](.github/PULL_REQUEST_TEMPLATE.md) | Plantilla de PR |
 
 ---
 
-## 19. Recomendación final
+## 💡 Recursos externos
 
-GitHub funciona mejor cuando se usa con disciplina, claridad y una buena comunicación. No se trata solo de “guardar código”, sino de construir un proyecto sostenible, revisable y fácil de mantener.
-
-La combinación ideal es:
-
-- estructura clara
-- ramas bien usadas
-- commits descritos
-- PRs bien documentados
-- revisiones objetivas
-- seguridad y automatización
-- documentación moderna
-
-Con estas prácticas, cada proyecto personal o colaborativo será más robusto y más fácil de escalar.
+- [GitHub Docs](https://docs.github.com/) - Documentación oficial
+- [Conventional Commits](https://www.conventionalcommits.org/) - Estándar de mensajes
+- [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) - Modelo de ramas
+- [Pro Git Book](https://git-scm.com/book/es/v2) - Guía completa de Git
 
 ---
 
-## 20. Recursos útiles
+## ❓ FAQ
 
-- GitHub Docs: https://docs.github.com/
-- Git Flow: https://nvie.com/posts/a-successful-git-branching-model/
-- Convenciones de commit: https://www.conventionalcommits.org/
-- GitHub Projects: https://github.com/features/issues
+### ¿Puedo usar esto en mi proyecto?
+
+**Sí.** La guía es de código abierto (MIT). Copia, personaliza y comparte libremente.
+
+### ¿Funciona para equipos pequeños?
+
+**Perfectamente.** Las prácticas son escalables: desde 1 persona hasta cientos de desarrolladores.
+
+### ¿Es necesario seguir TODO al pie de la letra?
+
+**No.** Adapta las recomendaciones a tu contexto. Lo importante es tener un proceso claro y consistente.
+
+### ¿Puedo sugerir cambios?
+
+**Claro.** Abre un issue o un PR con tu propuesta. Todas las mejoras son bienvenidas.
 
 ---
 
-## 21. Conclusión
+## 📊 Resumen ejecutivo
 
-Usar GitHub bien no significa complicar el flujo; significa hacerlo claro, reproducible y seguro. Con estas prácticas, tanto un proyecto individual como un equipo pueden trabajar de manera más eficiente, reducir errores y mantener el código sano a largo plazo.
+<table>
+<tr>
+<td width="50%">
 
-Este repositorio sirve como referencia rápida para aplicar buenas prácticas en el día a día.
+### Para proyectos personales
+
+✅ Mantén el código organizado  
+✅ Documenta tus decisiones  
+✅ Aprende buenas prácticas  
+✅ Prepárate para trabajo en equipo  
+
+</td>
+<td width="50%">
+
+### Para equipos
+
+✅ Flujo de trabajo consistente  
+✅ Colaboración profesional  
+✅ Revisión de código efectiva  
+✅ Menos conflictos y errores  
+
+</td>
+</tr>
+</table>
+
+---
+
+## 📈 Estado de la guía
+
+- ✅ Completa y operacional
+- 📝 Actualizaciones periódicas
+- 🔄 Feedback bienvenido
+- 🚀 Listo para usar en producción
+
+---
+
+## 📝 Licencia
+
+Este repositorio está bajo licencia **MIT**. Puedes usar, copiar, modificar y distribuir libremente.
+
+[Ver licencia](LICENSE)
+
+---
+
+## 👤 Autor
+
+**Francisco Grandón**  
+📧 grandonpanxo@gmail.com  
+🔗 [GitHub](https://github.com/FranciscoGrandon)
+
+---
+
+<div align="center">
+
+### ⭐ Si esta guía te fue útil, considera dejar una estrella
+
+**Contribuidores bienvenidos** · [Abre una issue](https://github.com/FranciscoGrandon/github-best-practices/issues) · [Envía un PR](https://github.com/FranciscoGrandon/github-best-practices/pulls)
+
+---
+
+Hecho con ❤️ para desarrolladores que quieren trabajar mejor en GitHub
+
+</div>
